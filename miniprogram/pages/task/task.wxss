@@ -1,0 +1,42 @@
+.addtask{
+  display: flex;
+  flex-direction: column;
+}
+.FistTitle{
+  font-size: 60rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.title{
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.input{
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  font-size: 40rpx;
+}
+.TaskContent{
+  margin-top: 10rpx;
+  background-color: rgb(240, 246, 247);
+  border-radius: 10rpx;
+  font-size: 40rpx;
+  margin-left: 20rpx;
+  width: 95vw;
+}
+.line{
+  height: 3rpx;
+  background-color: rgb(216, 215, 215);
+}
+.Button{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.Button button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}

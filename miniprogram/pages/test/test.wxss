@@ -1,0 +1,316 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.addtask{
+  display: flex;
+  flex-direction: column;
+}
+.FistTitle{
+  font-size: 60rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.title{
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.input{
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  font-size: 40rpx;
+}
+.TaskContent{
+  margin-top: 10rpx;
+  background-color: rgb(240, 246, 247);
+  border-radius: 10rpx;
+  font-size: 40rpx;
+  margin-left: 20rpx;
+  width: 95vw;
+}
+.line{
+  height: 3rpx;
+  background-color: rgb(216, 215, 215);
+}
+.Button{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.Button button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+
+.tabs{
+  display: flex;
+}
+.div{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10rpx;
+  height: 75rpx;
+}
+.active{
+  color: rgb(0, 51, 128);
+  border-bottom: 3rpx solid currentColor;
+}
+.Contain{
+  margin-top: 50rpx;
+  border-radius: 30rpx;
+}
+.Tbox{
+  margin-top: 20rpx;
+}
+.text{
+  font-size: 45rpx;
+  margin-left: 30rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.Tinput{
+  width: 95%;
+  margin-left: 20rpx;
+}
+.addPic{
+  margin-left: 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.addPic image{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgb(248, 248, 248);
+  border-radius: 30rpx;
+}
+.TablePic{
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.UpLoadT{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.TablePic image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.SubmitBtn{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.SubmitBtn button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+
+.BookPage{
+  margin-top: 30rpx;
+}
+.Btext{
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.btext{
+  color: rgba(107, 117, 255, 0.829);
+}
+
+.Bline{
+  height: 1rpx;
+  background-color: rgb(216, 215, 215);
+}
+.BPicText{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.BPic{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.BPic image{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgb(248, 248, 248);
+  border-radius: 30rpx;
+  margin-top: 30rpx;
+}
+.BookBtn{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.BookBtn button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+.UpLoadPic image{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+  color: rgb(87, 125, 253);
+}
+.TipsPage{
+  margin-top: 30rpx;
+}
+.TipsTitleBox{
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.TipsTitle{
+  color: rgb(29, 52, 255);
+  font-size: 60rpx;
+  text-align: left;
+  align-items: center;
+}
+.TitleInput{
+  width: 70%;
+  font-size: 55rpx;
+  position: absolute;
+  left: 150rpx;
+  top: 20rpx;
+}
+.TipsType{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.TipsText{
+  color: rgba(107, 117, 255, 0.829);
+  font-size: 40rpx;
+}
+.TypeInput{
+  width: 20%;
+  margin-left: 15rpx;
+  font-size: 40rpx;
+}
+.TipsLine{
+  height: 1rpx;
+  background-color:rgb(216, 215, 215);
+}
+.TipsContent{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 40rpx;
+}
+.TipsArea{
+  margin-top: 10rpx;
+  background-color: rgb(231, 246, 248);
+  border-radius: 20rpx;
+  font-size: 40rpx;
+}
+.UpTipsPic{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx
+}
+.TipsAddPic{
+  margin: 0 auto;
+}
+.TipsAddPic image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.TipImage{
+  margin-left: 30rpx;
+}
+.TipImage image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.TipsBtn{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.TipsBtn button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+.AlbumPage{
+  height: 100vh;
+  width: 100vw;
+}
+.AlbumName{
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.NameTips{
+  font-size: 50rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.NameInput{
+  height: 50rpx;
+  font-size: 45rpx;
+  width: 400rpx;
+  margin-top: 7rpx;
+  margin-left: 10rpx;
+  position: absolute;
+  bottom: 5rpx;
+  right: 60rpx;
+}
+.NameLine{
+  height: 2rpx;
+  width: 400rpx;
+  background-color: rgb(191, 228, 250);
+}
+.AddAlbumPic{
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+.AddAlbumTips{
+  font-size: 40rpx;
+  color: rgba(107, 117, 255, 0.829);
+}
+.UpAlbumPic{
+  margin-top: 50rpx;
+  text-align: center;
+}
+.UpAlbumPic image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.AddAlbumIcon{
+  text-align: center;
+  margin-top: 50rpx;
+}
+.AddAlbumIcon image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.AlbumBtn{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.AlbumBtn button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}

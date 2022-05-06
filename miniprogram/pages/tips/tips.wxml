@@ -1,0 +1,28 @@
+<view class="TipsPage">
+  <form bindsubmit="ChangeTips">
+    <view class="TipsHead">
+      <view class="TipsTitle">
+        <view class="TitleText">标题:</view>
+        <input class="TTInput" name="TipsTitle" type="text" value="{{TipsData[index].TipsTitle}}"/>
+      </view>
+      <view class="TipsType">
+        <view class="TypeText">类别:</view>
+        <input class="TypeInput" name="TipsType" type="text" value="{{TipsData[index].TipsType}}"/>
+      </view>
+    </view>
+    <view class="TipsContent">
+      <textarea class="ContentInput" name="TipsContent" type="text" value="{{TipsData[index].TipsContent}}"></textarea>
+    </view>
+    <block wx:for="{{TipsPicPath}}" wx:for-index="num">
+      <view class="TipsPic">
+        <image class="TipsImage" bindtap="ViewTipsPic" id="{{num}}" src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item}}"></image>
+        <image class="deleteIcon" id="{{index}}" bindtap="deletePic" src="../../images/delete.png"></image>
+      </view>
+    </block>
+    <view class="TipsTime">{{TipsData[index].AddTipsTime}}</view>
+    <view class="TipsBtn">
+      <button form-type="submit" class="TB" style="width:300rpx">更改</button>
+      <button class="TB" style="width:300rpx" bindtap="deleteTips">删除</button>
+    </view>
+  </form>
+</view>

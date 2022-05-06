@@ -1,0 +1,77 @@
+
+.TipsPage{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.TipsHead{
+  margin-top: 40rpx;
+}
+.TipsTitle{
+  font-size: 50rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+}
+.TTInput{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  font-size: 50rpx;
+  height: 50rpx;
+}
+.TipsType{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.TypeText{
+  font-size: 40rpx;
+}
+.TypeInput{
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+  height: 40rpx;
+  justify-content: center;
+  font-size: 40rpx;
+}
+.TipsContent{
+  margin-top: 30rpx;
+}
+.ContentInput{
+  margin-left: 20rpx;
+  height: 200rpx;
+  font-size: 40rpx;
+}
+.TipsPic{
+  text-align: center;
+}
+.TipsImage{
+  width: 500rpx;
+  height: 500rpx;
+  text-align: center;
+}
+.deleteIcon{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  border-radius: 50%;
+}
+.TipsTime{
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+.TipsBtn{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.TB{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}

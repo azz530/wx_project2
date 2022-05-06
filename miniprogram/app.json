@@ -1,0 +1,55 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/task/task",
+
+    "pages/user/user",
+    "pages/Div/Div",
+    "pages/table/table",
+    "pages/tips/tips",
+    "pages/test/test",
+    "pages/Detail/Detail",
+    "pages/Album/Album"
+
+
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否同意授权获取您的位置信息"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#587ffd",
+    "navigationBarTitleText": "私人订制",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-o.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "添加",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-o.png"
+      }
+    ]
+    
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,133 @@
+<view class="page">
+  <!-- 课表 -->
+  <view wx:if="{{index==0&&hasUserInfo}}">
+    <block wx:if="{{TableData.length}}">
+      <block wx:for="{{TableData}}">
+        <view class="TablePage" bindlongpress="EditorTable" data-tablepic="{{item.TPic}}" data-id="{{item._id}}">
+          <view class="TableHead">
+            <view class="TUserInfo">
+              <view class="TUserAvatar">
+                <image src="{{item.userAvatar}}"></image>
+              </view>
+              <view class="NT">
+                <view class="TUserName">
+                  {{item.userName}}
+                </view>
+                <view class="TableTime">{{item.AddTableTime}}</view>
+              </view>
+            </view>
+            <view class="TMessage">
+              <view class="major">{{item.major}}</view>
+              <view class="term">{{item.term}}</view>
+              <view class="Date">{{item.Date}}</view>
+            </view>
+          </view>
+          <block wx:for="{{item.TPic}}" wx:for-index="num">
+            <view class="TablePic">
+              <image bindtap="ViewTablePic" id="{{num}}" data-listid="{{index}}" class="TableImage" src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item}}" mode="aspectFit">
+              </image>
+            </view>
+          </block>
+          <block wx:if="{{canEditor&&item._id==TablecurrentId}}">
+            <view class="EditorDiv">
+              <button style="width:300rpx" class="deleteTable" bindtap="DeleteT">删除</button>
+              <button style="width:300rpx" class="cancel" bindtap="TableCancel">取消</button>
+            </view>
+          </block>
+        </view>
+      </block>        
+    </block>
+  </view>
+  <!-- 课表 -->
+
+  <!-- 便签 -->
+  <view wx:if="{{index==1&&hasUserInfo}}">
+    <view class="TipsPage">
+      <block wx:for="{{TipsData}}">
+        <view class="Tips" bindtap="GotoTips" bindlongpress="DeleteTips" data-pic="{{item.TipsPic}}" data-id="{{item._id}}" data-index="{{index}}">
+          <view class="TipsHead">
+            <view class="TipsTitle">{{item.TipsTitle}}</view>
+            <view class="TipsTime">{{item.AddTipsTime}}</view>
+          </view>
+          <view class="TipsContent">{{item.TipsContent}}</view>
+        </view>
+        <block wx:if="{{TipsEditor&&item._id==TipscurrentId}}">
+          <view class="DeleteTipsDiv">
+            <button class="DTipsBtn" style="width:200rpx" bindtap="DeleteTipsBtn">删除</button>
+            <button class="TipsCancel" style="width:200rpx" bindtap="Cancel">取消</button>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <!-- 便签 -->
+
+  <!-- 相册 -->
+  <view wx:if="{{index==2&&hasUserInfo}}">
+    <view class="AlbumPage">
+      <block wx:if="{{AlbumData.length}}">
+        <block wx:for="{{AlbumData}}">
+          <view class="AlbumBox" bindlongpress="getAlbumId" data-coverpic="{{item.AlbumPic}}" data-albumpic="{{item.AlbumPhoto}}" data-id="{{item._id}}">
+            <view class="AlbumCover">
+              <block wx:if="{{item.AlbumPic.length}}">
+                <image bindtap="ToAlbum" data-index="{{index}}" src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item.AlbumPic}}"></image>
+              </block>
+              <block wx:else>
+                <image src="../../images/pic.png"></image>
+              </block>
+              <block wx:if="{{isShow}}">
+                <view class="ADeleteIcon">
+                  <image bindtap="DeleteAlbum" src="../../images/delete.png"></image>
+                </view>
+              </block>
+            </view>
+            <view class="AlbumName">
+              <view class="NameText">{{item.AlbumName}}</view>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <!-- 相册 -->
+
+  <!-- 讨论 -->
+  <view wx:if="{{index==3&&hasUserInfo}}">
+      <view class="DisPage">
+        <view class="Title">讨论圈</view>
+        <block wx:if="{{DivData.length}}">
+          <block wx:for="{{DivData}}">
+            <view class="DisBox">
+              <view class="DisUserInfo">
+                <view class="DisUserAvatar">
+                  <image src="{{item.userAvatar}}"></image>
+                </view>
+                <view class="DisUserName">
+                  {{item.userName}}
+                  <view class="DisTime">{{item.AddDivTime}}</view>
+                </view>
+              </view>
+              
+              <view class="DivContent">{{item.DivContent}}</view>
+              <view class="DivImage">
+                <block wx:if="{{item.DivPic.length}}">
+                  <block wx:for="{{item.DivPic}}" wx:for-item="num">
+                    <view class="DivPic">
+                      <image src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{num}}"></image>
+                    </view>
+                  </block>
+                </block>
+              </view>
+
+              <view class="DivLocation">{{item.DetailLocation}}</view>
+            </view>
+          </block>
+        </block>
+      </view> 
+    <view class="AddDisIcon">
+      <image bindtap="AddDis" src="../../images/DivPlus.png"></image>
+    </view>
+  </view>
+
+  <!-- 讨论 -->
+</view>

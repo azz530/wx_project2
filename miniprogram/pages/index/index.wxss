@@ -1,0 +1,141 @@
+.page{
+  display: flex;
+  flex-direction: column;
+}
+.pic image{
+  width: 100%;
+  height: 360rpx;
+}
+.box{
+  display: flex;
+}
+.icon{
+  flex: 1;
+  margin-top: 20rpx;
+  width: 100rpx;
+  justify-content: center;
+  text-align: center;
+}
+.icon image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.text{
+  display: flex;
+}
+.iconname{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.date{
+  margin-top: 30rpx;
+}
+.date text{
+  font-size: 50rpx;
+}
+.content{
+  margin-left: 10rpx;
+}
+.table{
+  width: 90%;
+  border: 3rpx solid rgb(95, 95, 95);
+  border-radius: 30rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  background-color: rgb(250, 250, 250);
+}
+.tips{
+  font-size: 40rpx;
+  margin: 30rpx 100rpx;
+}
+.Taskbutton{
+  display: flex;
+  flex-direction: row;
+}
+.Taskbutton button{
+  border: 1rpx solid rgb(212, 236, 247);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(121, 121, 121);
+}
+.Tips{
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}
+.divtext{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+}
+.choose{
+  display: flex;
+  flex-direction: row;
+}
+.check1{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+.check2{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(241, 100, 100);
+}
+.Book{
+  margin-top: 30rpx;
+}
+.BookPage{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.BookTitle{
+  font-size: 50rpx;
+}
+.BookDiv{
+  display: flex;
+  flex-direction: row;
+  height: 250rpx;
+}
+.BookPic image{
+  width: 180rpx;
+  height: 230rpx;
+}
+.BookMessage{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.BookName{
+  font-size: 40rpx;
+}
+.BookAT{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.BookAuthor{
+  font-size: 35rpx;
+  margin-right: 20rpx;
+}
+.BookType{
+  font-size: 35rpx;
+}
+.BookContent{
+  font-size: 35rpx;
+  color: rgb(122, 122, 122);
+  margin-top: 20rpx;
+}
+.BookLine{
+  height: 2rpx;
+  background-color: rgb(223, 221, 221);
+  margin-top: 20rpx;
+}

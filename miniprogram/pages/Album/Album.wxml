@@ -1,0 +1,20 @@
+<view class="AlbumPage">
+  <view class="AlbumName">
+    <view class="NameText">{{AlbumData[index].AlbumName}}</view>
+  </view>
+  <view class="AlbumBtn">
+    <button class="Btn1" style="width:500rpx" bindtap="AddPhoto">上传</button>
+  </view>
+  <view class="AlbumPhotoBox">
+    <block wx:for="{{AlbumData[index].AlbumPhoto}}" wx:for-index="num">
+      <view class="AlbumPhoto">
+        <image bindlongpress="getPicpath" bindtap="ViewAP" id="{{num}}" data-apic="{{item}}" src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item}}"></image>
+        <block wx:if="{{isShow}}">
+          <view class="DeleteAP">
+            <image data-id="{{index}}" bindtap="DeleteAPic" src="../../images/delete.png"></image>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

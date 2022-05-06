@@ -1,0 +1,35 @@
+
+<view class="DivPage">
+  <view class="Box">
+    <view class="Title">发表说说</view>
+    <form bindsubmit="GetDivData">
+      <view class="DivCotent">
+        <textarea value="{{remove}}" type="text" name="DivContent"></textarea>
+      </view>
+      <view class="UserLocation">
+        <block wx:if="{{isShow}}">
+          <view class="Location">{{addressDetail}}</view>
+        </block>
+        <block wx:if="{{!isShow}}">
+          <image bindtap="getLocation" src="../../images/location.png"></image>
+        </block>
+      </view>
+      <view class="DivPic">
+        <block wx:for="{{DivTemPath}}">
+          <view class="UpsPic" wx:if="{{DivTemPath.length}}">
+            <image src="{{item}}"></image>
+          </view>
+        </block>
+        <block wx:if="{{DivTemPath.length<3}}">
+          <view class="AddDivPic">
+            <image bindtap="AddDivPic" src="../../images/pic.png"></image>
+          </view>
+        </block>
+      </view>
+      <view class="AddBtn">
+        <button form-type="submit">发表</button>
+      </view>
+    </form>
+  </view>
+</view>
+

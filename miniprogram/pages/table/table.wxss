@@ -1,0 +1,230 @@
+
+.TablePage{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+.TableHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TUserInfo{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+}
+.TUserAvatar{
+  margin-top: 10rpx;
+}
+.TUserAvatar image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.NT{
+  padding-top: 10rpx;
+}
+.TUserName{
+  color: rgb(250, 144, 130);
+  font-size: 35rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.TableTime{
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+.TMessage{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-right: 40rpx;
+}
+.major{
+  text-align: center;
+}
+.term{
+  text-align: center;
+}
+.Date{
+  text-align: center;
+}
+.TablePic{
+  margin-top: 30rpx;
+  text-align: center;
+}
+.TableImage{
+  width: 60vw;
+}
+.EditorDiv{
+  display: flex;
+  flex-direction: row;
+}
+.deleteTable{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+}
+.cancel{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+.TipsPage{
+  background-color: rgb(245, 245, 244);
+  height: 100vh;
+  width: 100vw;
+}
+.Tips{
+  background-color: rgb(255, 255, 255);
+  width: 700rpx;
+  height: 150rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid rgb(190, 188, 188);
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.TipsHead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.TipsTitle{
+  margin-left: 20rpx;
+}
+.TipsTime{
+  font-size: 30rpx;
+}
+.TipsContent{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  color: rgb(128, 128, 128);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.DeleteTipsDiv{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.DTipsBtn{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(241, 100, 100);
+  height: 60rpx;
+  line-height: 20rpx;
+}
+.TipsCancel{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+  height: 60rpx;
+  line-height: 20rpx;
+}
+.AlbumPage{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.AlbumBox{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  position: relative;
+}
+.AlbumCover{
+  text-align: center;
+}
+
+.AlbumCover image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.ADeleteIcon image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.AlbumName{
+  text-align: left;
+}
+.NameText{
+  font-size: 40rpx;
+}
+.DisPage{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(243, 241, 241);
+}
+
+.Title{
+  margin-top: 30rpx;
+  font-size: 60rpx;
+  color: rgb(107, 117, 255, 0.829);
+  text-align: center;
+}
+.DisBox{
+  width: 95vw;
+  background-color: rgb(255, 252, 252);
+  margin-top: 20rpx;
+  margin-left: 2.5%;
+}
+.DisUserInfo{
+  width: 100%;
+  height: 130rpx;
+}
+.DisUserInfo{
+  display: flex;
+  flex-direction: row;
+}
+.DisUserAvatar image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.AddDisIcon image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 5rpx solid rgb(169, 223, 252);
+  position: fixed;
+  right: 10%;
+  bottom: 15%;
+  background-color: rgb(255, 255, 255);
+}
+.DivContent{
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  width: 95%;
+  word-wrap:break-word
+}
+.DivImage{
+  display: flex;
+  flex-direction: row;
+}
+.DivPic{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.DivPic image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.DivLocation{
+  font-size: 35rpx;
+  text-align: right;
+  margin-top: 30rpx;
+}

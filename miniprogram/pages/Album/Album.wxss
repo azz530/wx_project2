@@ -1,0 +1,41 @@
+.AlbumName{
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+}
+.NameText{
+  font-size: 60rpx;
+}
+.AlbumBtn{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+}
+.Btn1{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}
+.AlbumPhotoBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.AlbumPhoto{
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  position: relative;
+}
+.AlbumPhoto image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.DeleteAP image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 180rpx;
+  left: 180rpx;
+}

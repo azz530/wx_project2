@@ -1,0 +1,209 @@
+<view class="page">
+  <!-- 每日任务 -->
+  <view wx:if="{{type==1}}">
+    <view class="addtask">
+      <form bindsubmit="addTask" bindreset="resetTask" data-add="{{1}}">
+        <view class="word">
+          <view class="title">记单词数:</view>
+          <view class="input">
+            <input value="{{remove}}" type="text" name="Words"/>
+            <view class="line"></view>
+          </view>
+        </view>
+        <view class="word">
+          <view class="title">每日锻炼:</view>
+          <view class="input">
+            <input value="{{remove}}" type="text" name="Exercise"/>
+            <view class="line"></view>
+          </view>
+        </view>
+        <view class="word">
+          <view class="title">每日学习:</view>
+          <textarea class="TaskContent" value="{{remove}}" type="text" name="Content"></textarea>
+        </view>
+        <view class="Button">
+          <button form-type="submit" style="width:300rpx">提交</button>
+          <button form-type="reset" style="width:300rpx">重置</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <!-- 每日任务 -->
+  <view wx:if="{{type!=1}}">
+    <view class="tabs">
+      <view class="div {{item.isActive?'active':''}}" bindtap="Chose" data-list="{{index}}" wx:for="{{tabs}}" wx:key="index">{{item.name}}
+      </view>
+    </view>
+    <!-- 上传课表 -->
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="tables">
+        <form bindsubmit="addTable" bindreset="resetTable">
+          <view class="Contain">
+            <view class="Tbox">
+              <view class="text">专业：</view>
+              <view class="Tinput">
+                <input value="{{remove}}" type="text" name="major"/>
+                <view class="line"></view>
+              </view>
+            </view>
+            <view class="Tbox">
+              <view class="text">学期：</view>
+              <view class="Tinput">
+                <input value="{{remove}}" type="text" name="term"/>
+                <view class="line"></view>
+              </view>
+            </view>
+            <view class="Tbox">
+              <view class="text">日期：</view>
+              <view class="Tinput">
+                <input value="{{remove}}" type="text" name="Date"/>
+                <view class="line"></view>
+              </view>
+            </view>
+            <view class="UpLoadT">
+              <block wx:for="{{TableTemPath}}">
+                <view class="TablePic" wx:if="{{TableTemPath.length}}">
+                    <image src="{{item}}" mode="aspectFill"></image>
+                </view>
+              </block>
+              <view wx:if="{{TablePic.length<3}}">
+                <view class="addPic" bindtap="addPic">
+                  <image src="../../images/plus.png"></image>
+                </view>
+              </view>
+            </view>
+            <view class="SubmitBtn">
+              <button form-type="submit" style="width:300rpx">提交</button>
+              <button form-type="reset" style="width:300rpx">重置</button>
+            </view>
+          </view>
+        </form>
+      </view>
+    </block>
+    <!-- 上传课表 -->
+    <!-- 上传书籍 -->
+    <block wx:elif="{{tabs[1].isActive}}">
+      <view class="BookPage">
+        <form bindsubmit="getBook" bindreset="resetBook">
+          <view class="Btext">
+            <view class="btext">书名:</view>
+            <view class="Binput">
+              <input type="text" value="{{remove}}" name="bookname"/>
+              <view class="Bline"></view>
+            </view>
+          </view>
+          <view class="Btext">
+            <view class="btext">作者:</view>
+            <view class="Binput">
+              <input type="text" value="{{remove}}" name="bookauthor"/>
+              <view class="Bline"></view>
+            </view>
+          </view>
+          <view class="Btext">
+            <view class="btext">类别:</view>
+            <view class="Binput">
+              <input class="Binput" type="text" value="{{remove}}" name="booktype"/>
+              <view class="Bline"></view>
+            </view>
+          </view>
+          <view class="Btext">
+            <view class="btext">简介:</view>
+            <view class="Binput">
+              <input type="text" value="{{remove}}" name="bookcontent"/>
+              <view class="Bline"></view>
+            </view>
+          </view>
+          <view class="BPicText">书籍封面:</view>
+          <view class="BPic">
+            <block wx:for="{{BookTemPath}}">
+            <view class="UpLoadPic" wx:if="{{BookTemPath.length}}">
+              <image src="{{item}}"></image>
+            </view>
+            </block>
+            <block wx:if="{{BookPic.length<3}}">
+              <view class="AddBookIcon">
+                <image bindtap="addBookPic" src="../../images/plus.png"></image>
+              </view>
+            </block>
+          </view>
+          <view class="BookBtn">
+            <button form-type="submit" style="width:300rpx">上传</button>
+            <button form-type="reset" style="width:300rpx">重置</button>
+          </view>
+        </form>
+      </view>
+    </block>
+    <!-- 上传书籍 -->
+    <!-- 上传便签 -->
+    <block wx:elif="{{tabs[2].isActive}}">
+      <view class="TipsPage">
+        <form bindsubmit="getTips" bindreset="resetTips">
+          <view class="TipsTitleBox">
+            <view class="TipsTitle">标题:</view>
+            <input class="TitleInput" type="text" value="{{remove}}" name="TipsTitle"/>
+          </view>
+          <view class="TipsType">
+            <view class="TipsText">类别:</view>
+            <view class="TypeInput">
+              <input type="text" value="{{remove}}" name="TipsType"/>
+              <view class="TipsLine"></view>
+            </view>
+          </view> 
+          <view class="TipsContent">
+            <view class="TipsText">内容:</view>
+            <textarea class="TipsArea" name="TipsContent" value="{{remove}}"></textarea>
+          </view>
+          <view class="UpTipsPic">
+            <block wx:for="{{TipsTemPath}}">
+              <view class="TipImage" wx:if="{{TipsTemPath.length}}">
+                <image src="{{item}}"></image>
+              </view>
+            </block>
+            <block wx:if="{{TipsPic.length<3}}">
+              <view class="TipsAddPic">
+                <image bindtap="AddTipsPic" src="../../images/TipsPic.png"></image>
+              </view>
+            </block>  
+         </view>
+          <view class="TipsBtn">
+            <button style="width:300rpx" form-type="submit">上传</button>
+            <button style="width:300rpx" form-type="reset">重置</button>
+          </view>
+        </form>
+      </view>
+    </block>
+    <!-- 上传便签 -->
+
+    <!-- 新建相册 -->
+    <block wx:elif="{{tabs[3].isActive}}">
+      <view class="AlbumPage">
+        <form bindsubmit="getAlbum" bindreset="resetAlbum">
+          <view class="AlbumName">
+            <view class="NameTips">新建相册名:</view>
+            <view class="NameInput">
+              <input value="{{remove}}" name="AlbumName" type="text"/>
+              <view class="NameLine"></view>
+            </view>
+          </view> 
+          <view class="AddAlbumPic">
+            <view class="AddAlbumTips">相册封面</view>
+            <block wx:for="{{AlbumTemPath}}">
+              <view class="UpAlbumPic">
+                <image src="{{item}}"></image>
+              </view>
+            </block>
+            <block wx:if="{{!hasAlbumPic}}">
+              <view class="AddAlbumIcon">
+                <image bindtap="AddAlbumPic"  src="../../images/album.png"></image>
+              </view>
+            </block>
+          </view>
+          <view class="AlbumBtn">
+            <button style="width:300rpx" form-type="submit">创建</button>
+            <button style="width:300rpx" form-type="reset">重置</button>
+          </view>
+        </form>
+      </view>
+    </block>
+  </view>
+</view>

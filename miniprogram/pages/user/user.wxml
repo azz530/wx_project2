@@ -1,0 +1,41 @@
+<view class="pages">
+
+  <view wx:if="{{!hasUserInfo}}">
+    <view class="head" bindtap="getUserProfile">
+      <view class="unlogin"><image src="../../images/unlogin.png"></image></view>
+      <view class="login" >点击登录</view>
+    </view>
+  </view>
+  <view wx:else class="userM">
+    <view class="userPic">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="userName">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class="bar">
+    <view class="own"  bindtap="nav1" data-to="{{0}}">
+      <view class="bartext">任务记录</view>
+      <image src="../../images/more.png"></image>
+    </view>
+    <view class="divline"></view>
+    <view class="own"  bindtap="nav1" data-to="{{1}}">
+      <view class="bartext">我的书架</view>
+      <image src="../../images/more.png"></image>
+    </view>
+    <view class="divline"></view>
+    <view class="own"  bindtap="nav1" data-to="{{2}}">
+      <view class="bartext">我的说说</view>
+      <image src="../../images/more.png"></image>
+    </view>
+    <view class="divline"></view>
+    <view class="own"  bindtap="nav1" data-to="{{3}}">
+      <view class="bartext">隐私政策</view>
+      <image src="../../images/more.png"></image>
+    </view>
+    <view class="divline"></view>
+    <view class="logout">
+      <button bindtap="Logout" disabled="{{!hasUserInfo}}">注销账户</button>
+    </view>
+  </view>
+</view>

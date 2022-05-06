@@ -1,0 +1,85 @@
+<view class="page">
+  <view class="pic">
+    <image src="../../images/c.jpg"></image>
+  </view>
+  <!-- 图标链接 -->
+  <view class="door">
+    <view class="box">
+      <view wx:for="{{door}}" class="icon" catchtap="Goto" data-index="{{index}}">
+          <image src="{{item.icon}}">
+      </image></view>
+    </view>
+    <view class="text">
+      <view wx:for="{{door}}" class="iconname">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 图标链接 -->
+
+  <!-- 任务区 -->
+  <view class="date">
+    <view wx:if="{{isChose&&isFinish == false}}">
+      <text>每日任务</text>
+      <view class="table">
+        <view wx:if="{{isShow}}">
+          <view class="body">
+            <view class="tips">你还未添加今日任务，是否前往添加</view>
+            <view class="Taskbutton">
+              <button style="width:200rpx" bindtap="open" data-type="{{1}}">是</button>
+              <button style="width:200rpx" bindtap="close">否</button>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{!isShow}}">
+          <view class="Tips">今日任务</view>
+          <view class="TaskBox">
+            <view class="divtext">
+              每日单词:
+              <view class="content">{{TaskData.Words}}</view>
+            </view>
+            <view class="divtext">
+              每日锻炼:
+              <view class="content">{{TaskData.Exercise}}</view>
+            </view>
+            <view class="divtext">
+              每日计划:
+              <view class="content">{{TaskData.Content}}</view>
+            </view>
+            <view class="choose">
+              <button class="check1" bindtap="done" style="width:260rpx">完成</button>
+              <button class="check2" bindtap="abandon" style="width:260rpx">放弃</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 任务区 -->
+
+  <view class="Book">
+    <view class="BookBox">
+      <view class="BookTitle">我的书架</view>
+      <block wx:if="{{hasUserInfo}}">
+        <block wx:for="{{BookData}}">
+          <view class="BookPage">
+            <view class="BookDiv">
+              <block wx:for="{{item.BookPic}}">
+                <view class="BookPic">
+                  <image src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item}}"></image>
+                </view>
+              </block>
+              <view class="BookMessage">
+                <view class="BookName">{{item.BookName}}</view>
+                <view class="BookAT">
+                  <view class="BookAuthor">{{item.BookAuthor}}</view>
+                  <view class="BookType">{{item.BookType}}</view>
+                </view>
+                <view class="BookContent">{{item.BookContent}}</view>
+              </view>
+            </view>
+            <view class="BookLine"></view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>

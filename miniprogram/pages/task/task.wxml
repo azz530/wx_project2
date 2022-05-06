@@ -1,0 +1,26 @@
+<view class="addtask">
+  <form bindsubmit="addTask" bindreset="resetTask" data-add="{{1}}">
+    <view class="word">
+      <view class="title">记单词数:</view>
+      <view class="input">
+        <input value="{{remove}}" type="text" name="Words"/>
+        <view class="line"></view>
+      </view>
+    </view>
+    <view class="word">
+      <view class="title">每日锻炼:</view>
+      <view class="input">
+        <input value="{{remove}}" type="text" name="Exercise"/>
+        <view class="line"></view>
+      </view>
+    </view>
+    <view class="word">
+      <view class="title">每日计划:</view>
+      <textarea class="TaskContent" value="{{remove}}" type="text" name="Content"></textarea>
+    </view>
+    <view class="Button">
+      <button form-type="submit" style="width:300rpx">提交</button>
+      <button form-type="reset" style="width:300rpx">重置</button>
+    </view>
+  </form>
+</view>

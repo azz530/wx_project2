@@ -1,0 +1,61 @@
+.Box{
+  width: 100vw;
+}
+.Title{
+  font-size: 60rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.DivCotent{
+  margin: 5%;
+}
+.DivCotent textarea{
+  background-color: rgb(236, 232, 232);
+  width: 90vw;
+}
+.UserLocation{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  position: absolute;
+  right: 0;
+}
+.Location{
+  font-size: 35rpx;
+  text-align: right;
+}
+.UserLocation image{
+  width: 80rpx;
+  height: 80rpx;
+  text-align: right;
+  right: 10%;
+}
+.DivPic{
+  display: flex;
+  flex-direction: row;
+  margin-top: 150rpx;
+  justify-content: center;
+}
+.UpsPic{
+  margin-left: 30rpx;
+}
+.UpsPic image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.AddDivPic{
+  margin: 0 auto;
+}
+.AddDivPic image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.AddBtn{
+  margin-top: 30rpx;
+}
+.AddBtn button{
+  border: 1rpx solid rgb(187, 223, 240);
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(134, 199, 255);
+}

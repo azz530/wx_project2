@@ -1,0 +1,82 @@
+<!-- 任务记录 -->
+
+<block wx:if="{{to==0&&hasUserInfo}}">
+  <block wx:for="{{TaskData}}">
+    <view class="TaskBox">
+      <view class="TaskN">
+        <view class="TaskContent">
+          <view class="Wtext">每日单词:{{item.Words}}</view>
+        </view>
+        <view class="TaskContent">
+          <view class="Etext">每日锻炼:{{item.Exercise}}</view>
+        </view>
+        <view class="TaskContent">
+          <view class="Wtext">每日计划:{{item.Content}}</view>
+        </view>
+      </view>
+      <view class="TaskState">
+        <block wx:if="{{item.isFinish}}">
+          <view class="State1">完成</view>
+        </block>
+        <block wx:if="{{item.isAbandon}}">
+          <view class="State2">放弃</view>
+        </block>
+      </view>
+    </view>
+  </block>
+</block>
+
+<!-- 书架 -->
+
+<block wx:if="{{to==1&&hasUserInfo}}">
+  <block wx:for="{{BookData}}">
+    <view class="BookBox" bindlongpress="GetBookId" data-pic="{{item.BookPic}}" data-index="{{index}}" data-id="{{item._id}}">
+      <block wx:for="{{item.BookPic}}">
+        <view class="BookPic">
+          <image src="cloud://cloud1-3gtlq2234f937878.636c-cloud1-3gtlq2234f937878-1305999115/{{item}}"></image>
+        </view>
+      </block>
+      <view class="BookMessage">
+        <view class="BookName">{{item.BookName}}</view>
+        <view class="BookAT">
+          <view class="BookAuthor">{{item.BookAuthor}}</view>
+          <view class="BookType">{{item.BookType}}</view>
+        </view>
+        <view class="BookContent">{{item.BookContent}}</view>
+      </view>
+      <view class="AddBookTime">{{item.AddBookTime}}</view>
+    </view>
+    <view class="BookLine"></view>
+    <block wx:if="{{isDelBook&&item._id==BookCurrentId}}">
+      <view class="BookBtn">
+        <button class="BBtn1" style="width:200rpx" bindtap="DeleteBook">删除</button>
+        <button class="BBtn2" style="width:200rpx" bindtap="BookCancel">取消</button>
+      </view>
+    </block>
+  </block>
+</block>
+
+<!-- 书架 -->
+
+<!-- 说说 -->
+<block wx:if="{{to==2&&hasUserInfo}}">
+  <block wx:for="{{DivData}}">
+    <view class="DivBox" bindlongpress="getDivId" data-pic="{{item.DivPic}}" data-index="{{index}}" data-id="{{item._id}}">
+      <view class="DivCotent">{{item.DivContent}}</view>
+      <view class="DivTime">{{item.AddDivTime}}</view>
+    </view>
+    <block wx:if="{{isDeleDiv&&item._id==DivCurrentId}}">
+      <view class="DivBtn">
+        <button class="DBtn1" style="width:200rpx" bindtap="DeleteDiv">删除</button>
+        <button class="DBtn2" style="width:200rpx" bindtap="CancelDiv">取消</button>
+      </view>
+      </block>
+  </block>
+</block>
+
+<!-- 说说 -->
+
+<!-- 隐私 -->
+<block wx:if="{{to==3}}">
+  <view class="Title">未部署</view>
+</block>
